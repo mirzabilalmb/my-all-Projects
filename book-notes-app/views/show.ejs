@@ -1,0 +1,31 @@
+<% layout('layout') -%>
+
+<article class="show-card">
+  <div class="show-left">
+    <% if (book.isbn) { %>
+      <img src="/api/cover/<%= book.isbn %>" alt="Cover for <%= book.title %>" onerror="this.src='/images/no-cover.svg'">
+    <% } else { %>
+      <img src="/images/no-cover.svg" alt="No cover">
+    <% } %>
+  </div>
+  <div class="show-right">
+    <h2><%= book.title %></h2>
+    <p class="author"><strong>Author:</strong> <%= book.author || 'Unknown' %></p>
+    <p><strong>ISBN:</strong> <%= book.isbn || '—' %></p>
+    <p><strong>Rating:</strong> <%= book.rating != null ? book.rating + '/5' : '—' %></p>
+    <p><strong>Read:</strong> <%= book.read_date ? (new Date(book.read_date)).toLocaleDateString() : '—' %></p>
+
+    <section class="review">
+      <h3>Notes / Review</h3>
+      <p><%= book.review || 'No notes yet.' %></p>
+    </section>
+
+    <div class="actions">
+      <a class="btn" href="/books/<%= book.id %>/edit">Edit</a>
+      <form action="/books/<%= book.id %>?_method=DELETE" method="POST" onsubmit="return confirmDelete();">
+        <button type="submit" class="btn ghost">Delete</button>
+      </form>
+      <a class="btn" href="/books">Back</a>
+    </div>
+  </div>
+</article>

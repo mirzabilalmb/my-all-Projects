@@ -1,0 +1,51 @@
+<% layout('layout') -%>
+<% include('partials/unused') %>
+
+<% function sortLink(key, label) {
+     const isActive = (sort === key);
+     const nextOrder = (isActive && order === 'desc') ? 'asc' : 'desc';
+     return `<a class="sort-link ${isActive ? 'active' : ''}" href="/books?sort=${key}&order=${nextOrder}">${label}${isActive ? (order==='desc' ? ' ↓' : ' ↑') : ''}</a>`;
+} %>
+
+<section class="controls">
+  <div class="left">
+    <strong>Sort:</strong>
+    <%- sortLink('rating', 'Rating') %> |
+    <%- sortLink('recency', 'Recency') %> |
+    <%- sortLink('title', 'Title') %>
+  </div>
+  <div class="right">
+    <a class="btn" href="/books/new">+ Add book</a>
+  </div>
+</section>
+
+<section class="grid">
+  <% if (books.length === 0) { %>
+    <div class="empty">No books yet — add your first book!</div>
+  <% } %>
+
+  <% books.forEach(book => { %>
+    <article class="card">
+      <div class="cover">
+        <% if (book.isbn) { %>
+          <img src="/api/cover/<%= book.isbn %>" alt="Cover for <%= book.title %>" onerror="this.src='/images/no-cover.svg'">
+        <% } else { %>
+          <img src="/images/no-cover.svg" alt="No cover">
+        <% } %>
+      </div>
+      <div class="meta">
+        <h2 class="title"><a href="/books/<%= book.id %>"><%= book.title %></a></h2>
+        <p class="author"><%= book.author || 'Unknown author' %></p>
+        <p class="rating">Rating: <%= book.rating != null ? book.rating + '/5' : '—' %></p>
+        <p class="date"><%= book.read_date ? (new Date(book.read_date)).toLocaleDateString() : '' %></p>
+      </div>
+      <div class="actions">
+        <a href="/books/<%= book.id %>">View</a>
+        <a href="/books/<%= book.id %>/edit">Edit</a>
+        <form action="/books/<%= book.id %>?_method=DELETE" method="POST" onsubmit="return confirmDelete();">
+          <button type="submit" class="link-button">Delete</button>
+        </form>
+      </div>
+    </article>
+  <% }) %>
+</section>

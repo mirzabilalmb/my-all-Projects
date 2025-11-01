@@ -1,0 +1,17 @@
+<% layout('layout') -%>
+
+<h2>Add a Book</h2>
+
+<form action="/books" method="POST" class="form">
+  <label>Title <input name="title" required value="<%= book.title || '' %>"></label>
+  <label>Author <input name="author" value="<%= book.author || '' %>"></label>
+  <label>ISBN <input name="isbn" value="<%= book.isbn || '' %>"></label>
+  <label>Rating (0-5) <input name="rating" type="number" min="0" max="5" value="<%= book.rating || '' %>"></label>
+  <label>Read date <input name="read_date" type="date" value="<%= book.read_date ? book.read_date.toISOString().slice(0,10) : '' %>"></label>
+  <label>Review / Notes <textarea name="review"><%= book.review || '' %></textarea></label>
+
+  <div class="form-actions">
+    <button type="submit" class="btn">Add book</button>
+    <a class="btn ghost" href="/books">Cancel</a>
+  </div>
+</form>
