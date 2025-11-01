@@ -1,0 +1,52 @@
+
+.hero-gradient {
+  background: linear-gradient(-45deg, #090040, #471396, #B13BFF, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 80px 0;
+  color: white;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  .libertinus-font {
+    font-family: 'Libertinus Math', serif;
+    color: #471396;
+  }
+   
+  .mid-section {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); 
+    padding: 60px 20px;
+    border-radius: 16px;
+  }
+    td {
+      color: #471396 !important; /* Add !important to override Bootstrap */
+    }
+    .contact{
+        color: #B13BFF;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .instructions{
+        font-size: x-large;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 300;
+        font-style: normal;
+        padding-top: 40px;
+    }
+    .container.mt-5 {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  padding: 60px 20px;
+  border-radius: 16px;
+}
+    
