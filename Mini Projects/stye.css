@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  font-family: 'Karla', sans-serif;
+  color: black
+}
+.gradient-button {
+  padding: 15px 30px;
+  font-size: 38px;
+  color: white;
+  background: linear-gradient(45deg, black, #1c59ddda);
+  border: 20px solid transparent;
+  border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.gradient-button:hover {
+  background: linear-gradient(45deg, #7873f5, #5f1341ff); /* reversed gradient */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 
+
+}
