@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+
+
+        }
+
+        .container {
+            position: relative;
+            width: 30%;
+            background-color: rgba(5, 10, 10, 0.911);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-sizing: content-box;
+            box-shadow: inset;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #070e07e3;
+            color: white;
+            font-size: 1rem;
+            padding: 16px 32px;
+        }
+
+        .about {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            font-size: 1.5rem;
+            font-style: bold;
+        }
+
+        .center-list {
+            list-style-position: inside;
+            /* Moves bullets inside the list box */
+            text-align: center;
+            /* Centers text */
+            padding-left: 0;
+            /* Removes default left padding */
+            margin: 0 auto;
+            margin: 8px 0;
+            font-size: 1.1rem;
+            /* Centers the ul itself */
+        }
+
+        .about h2 {
+            color: white;
+            font-size: 5rem;
+            text-decoration-line: underline;
+            margin: 5px 0;
+
+        }
+
+        .about h3 {
+            color: white;
+            font-size: 3.5rem;
+            margin: 7px 2px;
+            text-decoration-line: underline;
+
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.8;
+            /* Adjust for more or less spacing */
+            max-width: 800px;
+            /* Optional: limits width for better readability */
+            margin: 0 auto;
+            /* Centers the paragraph block */
+        }
+
+        .center-list {
+            list-style-position: inside;
+            text-align: left;
+            max-width: 400px;
+            /* optional */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <img src="./dummy.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">Mirza</div>
+            </div>
+        </div>
+        <section class="about">
+
+            <h2>About Me</h2>
+            <p>I am a professional photographer...
+                I specialize in capturing the beauty of nature and the essence of human emotions through my lens. My
+                journey in photography began as a hobby, but it quickly turned into a passion that drives me to explore
+                new places and meet new people. I believe that every photograph tells a story, and I strive to tell
+                those stories through my work.</p>
+            </p>
+            <h3>Skills</h3>
+            <ul class="center-list"></ul>
+            <li>Landscape Photography</li>
+            <li>Portrait Photography</li>
+            <li>Wildlife Photography</li>
+            <li>Photo Editing</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mirza. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

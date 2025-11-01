@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        main {
+            flex: 1;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(49, 46, 46, 0.753);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 20px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .polaroid {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .polaroid:hover img {
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="gallery">
+                <h2 style="text-align: center; margin-top: 20px;">My Work</h2>
+
+                <div class="gallery-grid">
+                    <div class="polaroid">
+                        <img src="./camera.jpg" alt="camera" />
+                        <div class="container">
+                            <p>Street Photographer</p>
+                        </div>
+                    </div>
+
+                    <div class="polaroid">
+                        <img src="./photos.jpeg" alt="Gallery" />
+                        <div class="container">
+                            <p>Wildlife Landscape</p>
+                        </div>
+                    </div>
+
+                    <div class="polaroid">
+                        <img src="./wildlife.jpeg" alt="Wildlife" />
+                        <div class="container">
+                            <p>Nature Beauty</p>
+                        </div>
+                    </div>
+
+                    <div class="polaroid">
+                        <img src="./images (1).jpeg" alt="images1" />
+                        <div class="container">
+                            <p>Photography</p>
+                        </div>
+                    </div>
+
+                    <div class="polaroid">
+                        <img src="./images.jpeg" alt="images" />
+                        <div class="container">
+                            <p>Beautiful View</p>
+                        </div>
+                    </div>
+
+                    <div class="polaroid">
+                        <img src="./pexels-pixabay.jpg" alt="pexels-pixabay" />
+                        <div class="container">
+                            <p>Sunset Vibes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mirza. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+  
+        body {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+
+        }
+
+        h1 {
+            color: black;
+            background: #C58940;
+        }
+
+        h2 {
+            color: black;
+            background-color: #C58940;
+        }
+
+        html {
+            font-size: 40px;
+        }
+
+        body {
+            background-color: rgba(100, 216, 237, 0.76);
+            color: black;
+            font-size: 25px;
+        }
+
+        #color {
+            color: rgba(252, 255, 80, 0.884);
+        }
+
+        #size {
+            font-size: 2rem;
+        }
+
+        #weight {
+            font-weight: 900;
+        }
+
+        #family {
+            font-family: 'Caveat', cursive;
+        }
+
+        #align {
+            text-align: right;
+        }
+
+        h3 {
+            color: black;
+            background-color: #C58940;
+        }
+
+        h4 {
+            color: black;
+            background-color: #C58940;
+        }
+
+        h5 {
+            color: black;
+            background-color: #C58940;
+        }
+
+        h6 {
+            color: black;
+            background-color: #C58940;
+        }
+
+
+        table {
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        th,
+        td {
+            background-color: #96D4D4;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Styled Toggle Button */
+        #toggleBtn {
+            padding: 15px 40px;
+            font-size: 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #toggleBtn:hover {
+            background-color: #005fa3;
+            transform: scale(1.05);
+        }
+
+        /* Date/time display */
+        #datetime {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    
+  body {
+            width: 50%;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+             div {
+      height: 200px;
+      width: 200px;
+    }
+
+    p {
+      margin: 0;
+    }
+        }
+
+        nav {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: x-large;
+            box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            width: 200px;
+            height: 200px;
+        }
+        ul {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+ ul {
+      list-style-position: inside; /* Optional: keeps bullet centered */
+      text-align: center; /* Centers text inside the <li> */
+      padding: 0;
+    }
+    li {
+      margin: 0 auto;
+    }
+h1 {             box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  
+
+}
+h2{ box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+h3 {
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+}
+h4 {
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+h5 {
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+h6 {
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+p {
+  color: red;
+}
+
+
+.note {
+  font-size: 25px;
+}
+
+#id-selector-demo {
+  color: green;
+}
+
+li[value='4' ]{color: blue
+}
+table, th, td {
+  border:1px solid black;
+}

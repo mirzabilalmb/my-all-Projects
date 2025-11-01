@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <a href="./home.html">Home</a>
+        |
+        <a href="./To-do.html">About Me</a>
+        |
+
+        <a href="./To-do.html" target="_blank">To-Do App</a>
+
+    </nav>
+    <img src="./dummy-logo.webp" alt="Dummy Logo"
+        style="width: 200px; height: 200px; border-radius: 50%; border: 8px solid rgba(71, 166, 255, 0.925);  ">
+    <h1 style="border: 6px solid rgba(71, 166, 255, 0.925);">Intro</h1>
+    <p class=" note">I am a software engineer . My age is 23. I love web development . It is my passsion . I want
+        to
+        be a successful
+        web developer .I am a middle class young boy . I want to be a successful person in my life and i want to
+        support
+        my family financially and mentally</p>
+    <section>
+        <h2 style="border: 6px solid rgba(71, 166, 255, 0.925);">Interest</h2>
+        <p> My interest is in the web developing . I love
+            web developing . I did very hardwork in it . Its my dream
+            to
+            be a succesful web developer and it is everything for me </p>
+    </section>
+
+    <section>
+        <h3 style="border: 6px solid rgba(71, 166, 255, 0.925);">Hobbies</h3>
+        <ul>
+            <li class=" note" value="2">🎬I love watching movies</li>
+            <li class="note" id="id-selector-demo" value="3">🪁I love kite flying</li>
+            <li class="note" value="4">🏏I love cricket</li>
+            <li class="note" value="5">🏊I love swimming</li>
+        </ul>
+
+    </section>
+    <h4 style="border: 6px solid rgba(71, 166, 255, 0.925);">My Contact</h4>
+
+    <ul>
+        <li><a href="https://github.com/mirzabilalmb" target="_blank">My GitHub</a></li>
+        <li>Call Me: <a href="tel:+923708377935"> 0370 8377935</a></li>
+        <li><a href=" https://your-portfolio.com" target="_blank">🌐 My Portfolio</a></li>
+        <li>Email Me: <a
+                href="mailto:mirzabilalmb2007@gmail.com?subject=Hello%20Bilal&body=I%20found%20your%20portfolio!">mirzabilalmb2007@gmail.com</a>
+        </li>
+    </ul>
+
+
+    <footer>
+        <h5 style="border: 6px solid rgba(71, 166, 255, 0.925);">My Social Media</h5>
+        <p style="text-align: center; ; margin-bottom: 20px;">
+            <strong>Connect with me on social media:</strong>
+            <em>Follow me on social media:</em>
+        </p>
+
+
+
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <a href="https://www.facebook.com/mirzabilalmb" target="_blank">Facebook</a>
+
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <a href="https://www.instagram.com/mirzabilalmb" target="_blank">Instagram</a>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <a href="https://www.linkedin.com/in/mirzabilalmb" target="_blank">LinkedIn</a>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <a href="https://www.twitter.com/mirzabilalmb" target="_blank">Twitter</a>
+                </label>
+            </li>
+        </ul>
+
+        <table>
+
+            <tr>
+                <th>
+                    Country
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    Address
+                </th>
+            </tr>
+            <tr>
+                <td>Pakistan</td>
+                <td>Lahore</td>
+                <td>123 Main St, Lahore</td>
+            </tr>
+            <tr>
+        </table>
+        <h6 style="border: 6px solid rgba(71, 166, 255, 0.925);">Get in touch</h6>
+
+        <form action="./home.html">
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="Bilal"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Mirza"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+        <section><button id="toggleBtn" onclick="toggleDateTime()">Show Date and Time</button>
+            <div id="datetime" style="display: none; margin-top: 10px;"></div>
+        </section>
+        <script>
+            function toggleDateTime() {
+                const datetimeDiv = document.getElementById('datetime');
+                if (datetimeDiv.style.display === 'none') {
+                    datetimeDiv.style.display = 'block';
+                    datetimeDiv.innerHTML = new Date().toLocaleString();
+                } else {
+                    datetimeDiv.style.display = 'none';
+                }
+            }
+        </script>
+        <p style="text-align: center;">© 2025 Muhammad Bilal. All rights reserved.</p>
+
+    </footer>
+</body>
+
+</html>

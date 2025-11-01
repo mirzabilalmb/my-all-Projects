@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: rgba(11, 70, 78, 0.849);
+        }
+
+        div {
+            box-shadow: 0px 0px 15px currentcolor;
+            border: 5px solid currentcolor;
+            padding: 15px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 3s;
+            transition-delay: 1s;
+            animation-name: example;
+            animation-duration: 4s;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        #grad1 {
+            height: 150px;
+            width: 200px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: radial-gradient(red, yellow, green);
+        }
+
+        div:hover {
+            width: 300px;
+        }
+
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>The currentcolor Keyword</h2>
+
+    <p>This is some text in the body part...</p>
+
+    <div>
+        <p>This div's border color and shadow color is set to the current color value of the body element.</p>
+    </div>
+    <h2>Ellipse (this is default):</h2>
+    <div id="grad1"></div>
+
+</body>
+
+</html>
