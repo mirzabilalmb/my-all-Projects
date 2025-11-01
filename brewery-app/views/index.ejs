@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brewery Explorer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>🍺 Brewery Explorer</h1>
+  </header>
+  <main>
+    <div class="brewery-list">
+      <% breweries.forEach(brewery => { %>
+        <div class="brewery-card">
+          <h2><%= brewery.name %></h2>
+          <p><strong>Type:</strong> <%= brewery.brewery_type %></p>
+          <p><strong>Location:</strong> <%= brewery.city %>, <%= brewery.state %></p>
+          <% if (brewery.website_url) { %>
+            <p><a href="<%= brewery.website_url %>" target="_blank">Visit Website</a></p>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </main>
+  <footer>
+    <p>Powered by Open Brewery DB API</p>
+  </footer>
+</body>
+</html>
